@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: myflix_development
+  host: localhost
+  pool: 5
+  username: myflix
+  password: warmsun
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: myflix_test
+  host: localhost
+  pool: 5
+  username: myflix
+  password: warmsun
+
+  production:
+  adapter: postgresql
+  encoding: unicode
+  database: myflix_production
+  host: localhost
+  pool: 5
+  username: myflix
+  password: warmsun
