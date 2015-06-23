@@ -1,2 +1,7 @@
 %h1 Videos#index
 %p Find me in app/views/videos/index.html.haml
+
+.row
+  - @videos.each do |video| 
+    = video.small_cover_url
+  
