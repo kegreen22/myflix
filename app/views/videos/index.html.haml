@@ -1,7 +1,16 @@
 %h1 Videos#index
-%p Find me in app/views/videos/index.html.haml
+/ %p Find me in app/views/videos/index.html.haml
+
+-# Categories
+%h3 Action and Adventure
+
+
+%h3 Mystery
+
+
+%h3 Romance
 
 .row
   - @videos.each do |video| 
-    = video.small_cover_url
+    = image_tag video.small_cover_url
   
