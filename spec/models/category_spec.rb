@@ -12,7 +12,7 @@ describe Category do
   it "has valid video" do
     cat = Category.create(name: "action-comedy")
     k9_vid = Video.create(title: "K9", description: "Cop teams with K9 dog", category: "action-comedy")
-    expect(k9vid).to be_valid
+    expect(k9_vid).to be_valid
   end
 
   it "has many videos" do
