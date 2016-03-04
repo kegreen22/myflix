@@ -1,10 +1,11 @@
 require 'spec_helper'
 
 describe Video do
-  it "can save a record" do
-    black_rain = Video.new(title: 'Black Rain', description: 'American cop in Japan', category: "action", small_cover_url: "/tmp/Batman_Begins.jpg", category_id: '2')
-    black_rain.valid?
-    expect(black_rain).to be_valid
+
+  it "saves itself" do
+    black_rain = Video.new(title: "Black Rain", description: "American cop in Japan", category: "action")
+    black_rain.save
+    expect(Video.first).to eq(black_rain)
   end
 
   it "belongs to category" do
