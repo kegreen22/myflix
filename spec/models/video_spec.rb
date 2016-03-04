@@ -8,9 +8,9 @@ describe Video do
   end
 
   it "belongs to category" do
-    cat = Category.create(name: "action-comedy")
-    taxi = Video.create(title: "taxi", description: "Cop teams with taxi driver", category: "action-comedy")
-    expect(taxi.category).to eq(action-comedy)
+    action_comedy = Category.create(name: "action-comedy")
+    taxi = Video.create(title: "taxi", description: "Cop teams with taxi driver", category: action_comedy)
+    expect(taxi.category).to eq(action_comedy)
   end
 
   it "is invalid without a title" do
