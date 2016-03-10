@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Video do
 
   it "saves itself" do
-    black_rain = Video.new(title: "Black Rain", description: "American cop in Japan", category: "action")
+    black_rain = Video.new(title: "Black Rain", description: "American cop in Japan")
     black_rain.save
     expect(Video.first).to eq(black_rain)
   end

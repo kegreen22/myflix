@@ -19,6 +19,6 @@ describe Category do
     action_comedy = Category.create(name: "action-comedy")
     k9_vid = Video.create(title: "K9", description: "Cop teams with K9 dog", category: action_comedy)
     heat_vid = Video.create(title: "The Heat", description: "Two female LEOs team up", category: action_comedy)
-    expect(action_comedy.videos).to include(k9_vid, heat_vid)
+    expect(action_comedy.videos).to eq([k9_vid, heat_vid])
   end
 end
