@@ -21,4 +21,15 @@ describe Category do
     heat_vid = Video.create(title: "The Heat", description: "Two female LEOs team up", category: action_comedy)
     expect(action_comedy.videos).to eq([k9_vid, heat_vid])
   end
+
+  it "is invalid without a title" do
+    k9_vid = Video.create(title: nil, description: "Cop teams with K9 dog")
+    expect(k9_vid.errors[:title]).to include("can't be blank")
+  end
+
+  it "is invalid without a description" do
+    heat_vid = Video.create(title: "The Heat", description: nil)
+    expect(heat_vid.errors[:description]).to include("can't be blank")
+  end
+
 end
